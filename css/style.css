@@ -1,0 +1,301 @@
+@font-face {
+	font-family: 'ubuntu';
+	src: url("../font/Ubuntu-R.ttf") format("truetype");
+}
+
+body{
+	font-family: 'ubuntu';
+}
+
+main{
+	display: flex;
+	flex-direction: row;
+	height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+	height: calc(var(--vh, 1vh) * 100);
+}
+
+.left-container{
+	width: 50%;
+}
+
+.right-container{
+	width: 50%;
+	background-color: lightgrey;
+	background-image: url("../img/people.jpeg");
+	background-size: cover;
+}
+
+.sub-left-container{
+	margin: 0 auto;
+	width: 85%;
+}
+
+.burger-menu{
+	font-size: 40px;
+}
+
+.main-text{
+	margin-top: 35vh;
+	margin-top: calc(var(--vh, 1vh) * 35);
+}
+
+.main-text p{
+	margin: 0;
+	line-height: 1.3;
+}
+
+.main-text p:first-child{
+	font-size: 40px;
+}
+
+.main-text p:nth-child(2){
+	font-size: 75px;
+	margin-left: -3px;
+	line-height: 1;
+	font-weight: 700;
+}
+
+@media only screen and (max-width: 1226px){
+	.main-text p:nth-child(2){
+		font-size: 65px;
+	}
+}
+
+@media only screen and (max-width: 1062px){
+	.main-text p:nth-child(2){
+		font-size: 60px;
+	}
+}
+
+.main-text p:nth-child(3){
+	font-size: 40px;
+}
+
+.main-text p:last-child{
+	font-size: 24px;
+}
+
+@media only screen and (max-width: 489px){
+	.main-text p:first-child{
+		font-size: 30px;
+	}
+
+	.main-text p:nth-child(2){
+		font-size: 60px;
+	}
+
+	.main-text p:nth-child(3){
+		font-size: 30px;
+	}
+	
+	.main-text p:last-child{
+		font-size: 17px;
+	}
+}
+
+.home-icon-box-container{
+	display: flex;
+	margin-top: 80px;
+}
+
+.icon-box{
+	width: 35px;
+	height: 35px;
+}
+
+.icon-box:nth-child(n+2){
+	margin-left: 25px;
+}
+
+@media only screen and (max-width: 600px){
+	.right-container{
+		display: none;
+		width: 0%;
+	}
+
+	.left-container{
+		width: 100%;
+		background-size: cover;
+	}
+
+	.home-left-container-background-image{
+		background-image: url("../img/people2.png");
+	}
+
+	.about-left-container-background-image{
+		background-color: black;
+	}
+
+	.main-text p:first-child, .main-text p:nth-child(2), 
+	.main-text p:nth-child(3), .main-text p:last-child,
+	.burger-menu{
+		color: white;
+	}
+
+	.burger-menu{
+		text-align: right;
+	}
+
+	.svgx{
+		fill: white;
+	}
+}
+
+
+/* 
+overlay section below
+Ini merupakan penerapan css dengan konsep 
+Adjedsent Selcetor.
+*/
+
+label {
+  cursor:pointer;
+}
+
+.overlay {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: rgba(0, 0, 0, 0.979);
+  visibility: hidden;
+  color: white;
+  text-align:center;
+}
+
+.overlay-trigger:checked + .overlay {
+  visibility: visible;
+}
+
+.overlay-trigger {
+  display: none;
+}
+
+.overlay h1{
+	margin-top: 35vh;
+	font-size: 50px;
+}
+
+.overlay h6{
+	margin-top: 200px;
+}
+
+.overlay p{
+	margin-top: 40px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.overlay p:nth-child(2){
+	margin-left:-85px;
+}
+
+.overlay p:nth-child(3){
+	margin-left:-50px;
+}
+
+.overlay p:nth-child(4){
+	margin-left:-30px;
+}
+
+.reset-link{
+	text-decoration: none;
+	color: white;
+}
+
+
+/*  about.html section below */
+.about-left-container{
+	width: 35%;
+}
+
+.about-right-container{
+	width: 65%;
+	background-image: url(https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/21558810_1445893422184711_1848947568325338553_n.jpg?_nc_cat=109&_nc_oc=AQl7oOqWbz24jfPxrWI40kMezajgq46YF0YyLQllC2Qiwk4ZyckO5akJij97kw8amDs&_nc_ht=scontent-sin6-2.xx&oh=4eb206d8d3edc83495d2e9e63282b79a&oe=5DE2B1CE);
+	background-color: lightgrey;
+	background-size: cover;
+}
+
+.about-main-text{
+	margin-top: 12vh;
+	margin-top: calc(var(--vh, 1vh) * 12);
+}
+
+@media only screen and (min-width: 1600px){
+	.about-main-text{
+		margin-top: 20vh;
+		margin-top: calc(var(--vh, 1vh) * 20);
+	}
+
+	.about-left-container{
+		width: 30%;
+	}
+	
+	.about-right-container{
+		width: 70%;
+	}
+}
+
+.about-icon-box-container{
+	display: flex;
+	margin-top: 40px;
+}
+
+.about-main-text p:nth-child(2){
+	font-size: 55px;
+	margin-left: -3px;
+	line-height: 1;
+	font-weight: 700;
+}
+
+@media only screen and (max-width: 1226px){
+	.about-main-text p:nth-child(2){
+		font-size: 45px;
+	}
+}
+
+@media only screen and (max-width: 1062px){
+	.about-main-text p:nth-child(2){
+		font-size: 40px;
+	}
+}
+
+.about-main-text p:last-child{
+	font-size: 22px;
+}
+
+@media only screen and (max-width: 489px){
+	.main-text p:first-child{
+		font-size: 30px;
+	}
+
+	.main-text p:nth-child(2){
+		font-size: 60px;
+	}
+	
+	.main-text p:last-child{
+		font-size: 17px;
+	}
+}
+
+@media only screen and (max-width: 600px){
+	.about-right-container{
+		display: none;
+		width: 0%;
+	}
+
+	.about-left-container{
+		width: 100%;
+		background-size: cover;
+	}
+
+	.about-left-container-background-image{
+		background-color: black;
+	}
+
+	.about-main-text{
+		margin-top: 15vh;
+		margin-top: calc(var(--vh, 1vh) * 15);
+	}
+}
