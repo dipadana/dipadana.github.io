@@ -4,7 +4,6 @@ var text = document.getElementById('text-message');
 
 // Merupakan variable untuk menampung tombol clear, generate dan send
 var generateBtn = document.getElementById('generate-link');
-// var sendBtn = document.getElementById('send');
 var clearBtn = document.getElementById('clear-field');
 
 // Merupakan varibale penampung untuk display nomor tertuju
@@ -13,9 +12,7 @@ var reseiverNumber = document.getElementById('receiver-number');
 generateBtn.addEventListener('click', function(){
   // Mengenerate API dari WA dan langsung kirim
   if(telephone.value && text.value){
-    // sendBtn.setAttribute('href',`https://wa.me/62${telephone.value}?text=${encodeURI(text.value)}`);
     window.open(`https://wa.me/62${telephone.value}?text=${encodeURI(text.value)}`, "_blank");
-    // sendBtn.removeAttribute('style','display: none');
   }
   // Mengenerate nomor tertuju
   reseiverNumber.innerHTML = '62' + telephone.value;
@@ -29,14 +26,8 @@ generateBtn.addEventListener('click', function(){
 // Ketika ada perubahan pada HTMLInputElementObject,
 // maka akan otomatis merubah nomor tujuan
 telephone.addEventListener('input', function(){
-  // sendBtn.removeAttribute('href');
-  // sendBtn.setAttribute('style','display: none');
   reseiverNumber.innerHTML = '62' + telephone.value;
 })
-// text.addEventListener('input', function(){
-//   sendBtn.removeAttribute('href');
-//   sendBtn.setAttribute('style','display: none');
-// })
 
 // Ketika tombol clear di click, maka akan otomatis menghapus field dari
 // nomor telephone, text, dan receive number. 
@@ -44,8 +35,6 @@ clearBtn.addEventListener('click', function(){
   telephone.value = '';
   text.value = '';
   reseiverNumber.innerHTML = '';
-  // sendBtn.removeAttribute('href');
-  // sendBtn.setAttribute('style','display: none');
 })
 
 // Untuk mengubah ukuran satuan root 'vh'
