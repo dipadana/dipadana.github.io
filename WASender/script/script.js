@@ -4,21 +4,22 @@ var text = document.getElementById('text-message');
 
 // Merupakan variable untuk menampung tombol clear, generate dan send
 var generateBtn = document.getElementById('generate-link');
-var sendBtn = document.getElementById('send');
+// var sendBtn = document.getElementById('send');
 var clearBtn = document.getElementById('clear-field');
 
 // Merupakan varibale penampung untuk display nomor tertuju
 var reseiverNumber = document.getElementById('receiver-number');
 
 generateBtn.addEventListener('click', function(){
-  // Mengenerate API dari WA
+  // Mengenerate API dari WA dan langsung kirim
   if(telephone.value && text.value){
-    sendBtn.setAttribute('href',`https://wa.me/62${telephone.value}?text=${encodeURI(text.value)}`);
-    sendBtn.removeAttribute('style','display: none');
+    // sendBtn.setAttribute('href',`https://wa.me/62${telephone.value}?text=${encodeURI(text.value)}`);
+    window.open(`https://wa.me/62${telephone.value}?text=${encodeURI(text.value)}`, "_blank");
+    // sendBtn.removeAttribute('style','display: none');
   }
   // Mengenerate nomor tertuju
   reseiverNumber.innerHTML = '62' + telephone.value;
-  console.log(sendBtn);
+  console.log(generateBtn);
 
   var tempTelephone = telephone.value;
   var tempText = text.value;
@@ -26,29 +27,28 @@ generateBtn.addEventListener('click', function(){
 })
 
 // Ketika ada perubahan pada HTMLInputElementObject,
-// maka akan otomatis menghaus tombol send
+// maka akan otomatis merubah nomor tujuan
 telephone.addEventListener('input', function(){
-  sendBtn.removeAttribute('href');
-  sendBtn.setAttribute('style','display: none');
-  reseiverNumber.innerHTML = '';
+  // sendBtn.removeAttribute('href');
+  // sendBtn.setAttribute('style','display: none');
+  reseiverNumber.innerHTML = '62' + telephone.value;
 })
-text.addEventListener('input', function(){
-  sendBtn.removeAttribute('href');
-  sendBtn.setAttribute('style','display: none');
-})
+// text.addEventListener('input', function(){
+//   sendBtn.removeAttribute('href');
+//   sendBtn.setAttribute('style','display: none');
+// })
 
 // Ketika tombol clear di click, maka akan otomatis menghapus field dari
-// nomor telephone, text, dan receive number. Sekaligus juga menghapus atribut
-// href dan tombol send
+// nomor telephone, text, dan receive number. 
 clearBtn.addEventListener('click', function(){
   telephone.value = '';
   text.value = '';
   reseiverNumber.innerHTML = '';
-  sendBtn.removeAttribute('href');
-  sendBtn.setAttribute('style','display: none');
+  // sendBtn.removeAttribute('href');
+  // sendBtn.setAttribute('style','display: none');
 })
 
-// Untuk menga
+// Untuk mengubah ukuran satuan root 'vh'
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
