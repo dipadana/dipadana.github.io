@@ -32,6 +32,7 @@ main{
 
 .burger-menu{
 	font-size: 40px;
+	cursor: pointer;
 }
 
 .main-text{
@@ -159,7 +160,6 @@ label {
   right:0;
   bottom:0;
   background-color: rgba(0, 0, 0, 0.979);
-  visibility: hidden;
   color: white;
   text-align:center;
 }

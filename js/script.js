@@ -8,3 +8,12 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 /* 
 link refrence : https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
 */
+
+// For activate the menu burger
+let menuBurger = document.querySelector('#burger_menu')
+function menuBurgerVisible(){
+  menuBurger.style.visibility = 'visible'
+}
+function menuBurgerHidden(){
+  menuBurger.style.visibility = 'hidden'
+}

@@ -7,7 +7,6 @@
 	<link rel="stylesheet" href="./css/normalize.css"> 
 	<!--normalize.css include is for consistency view in other browser else chrome-->
 	<link rel="stylesheet" href="./css/style.css">
-	<script src="https://kit.fontawesome.com/ce836cddc0.js"></script>
 	<link rel="icon" href="img/qr-code.png" type = "image/x-icon">
 	<meta name="theme-color" content="#000">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -15,22 +14,19 @@
 	<title>Dipadana's Profile</title>
 </head>
 <body>
-	<script src="./js/script.js"></script>
+	
 	<main>
 		<div class="about-left-container about-left-container-background-image">
 			<div class="sub-left-container">
 
-					<label>
-						<input type="checkbox" class="overlay-trigger"/>
-						<div class="overlay">
-							<h1>MENU</h1>	
-							<p><a class="reset-link" href="index.html">Home</a></p>
-							<p><a class="reset-link" href="about.html">About Me</a></p> 
-							<p><a class="reset-link" href="https://www.alihgae.com/">Alihgae.com</a></p> 
-							<h6>Jakarta, Juli 2019  |  Made with ❤️ by Dipadana</h6>
-						</div>  
-						<p class="burger-menu">☰</p>
-					</label>
+				<p class="burger-menu" onclick="menuBurgerVisible();">☰</p>
+				<div class="overlay" onclick="menuBurgerHidden();" id="burger_menu" style="visibility: hidden;">
+					<h1>MENU</h1>	
+					<p><a class="reset-link" href="index.html">Home</a></p>
+					<p><a class="reset-link" href="about.html">About Me</a></p> 
+					<p><a class="reset-link" href="https://www.alihgae.com/">Alihgae.com</a></p> 
+					<h6>Jakarta, Juli 2019  |  Made with ❤️ by Dipadana</h6>
+				</div>  
 
 				<div class="main-text about-main-text">
 					<p>Dipadana Putu</p>
@@ -84,7 +80,8 @@
 		</div>
 
 		<div class="about-right-container"></div>
-
 	</main>
+	
+	<script src="./js/script.js"></script>
 </body>
 </html>
