@@ -1,7 +1,6 @@
 
 # dipadana profile page
-Merupakan web profile pribadi dari Dipadana Putu.
-Untuk kedepannya, situs ini akan terus diupdate.
+Is Dipadana Putu's personal web profile. Going forward, this site will continue to be updated.
 
 ### Known Issue:
 1. `about.html` page has responsive issue in tablet resolution
