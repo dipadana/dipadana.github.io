@@ -1,5 +1,5 @@
 
-# dipadana profile page
+# Dipadana profile page
 Is Dipadana Putu's personal web profile. Going forward, this site will continue to be updated.
 
 ### Known Issue:
