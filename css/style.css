@@ -21,7 +21,8 @@ main{
 .right-container{
 	width: 50%;
 	background-color: lightgrey;
-	background-image: url("../img/people.jpeg");
+	background: linear-gradient(87deg,#2dce89,#2dcecc)!important;
+	/* background-image: url("../img/people.jpeg"); */
 	background-size: cover;
 }
 
