@@ -10,35 +10,54 @@ body{
 main{
 	display: flex;
 	flex-direction: row;
-	height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-	height: calc(var(--vh, 1vh) * 100);
+	min-height: 100vh;
+	position: relative;
+}
+
+.avatar-img{
+	width: 130px;
+	height: 130px;
+}
+
+.avatar-img img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
 }
 
 .left-container{
-	width: 50%;
+	width: 60%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .right-container{
-	width: 50%;
-	background-color: lightgrey;
-	background: linear-gradient(87deg,#2dce89,#2dcecc)!important;
-	/* background-image: url("../img/people.jpeg"); */
+	width: 40%;
+	background-color: aquamarine;
+	/* background-image: url('../img/inn.svg'); */
+	background: url('../img/inn.svg'), linear-gradient(87deg,#2dce89,#2dcecc)!important;
 	background-size: cover;
 }
 
 .sub-left-container{
-	margin: 0 auto;
-	width: 85%;
+	margin: 40px auto;
+	width: 80%;
 }
 
 .burger-menu{
-	font-size: 40px;
+	font-size: 30px;
 	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 15px 20px 0 0;
+	color: white;
 }
 
 .main-text{
-	margin-top: 35vh;
-	margin-top: calc(var(--vh, 1vh) * 35);
+	margin-top: 40px;
+	/* margin-top: calc(var(--vh, 1vh) * 35); */
 }
 
 .main-text p{
@@ -97,7 +116,7 @@ main{
 
 .home-icon-box-container{
 	display: flex;
-	margin-top: 80px;
+	margin-top: 50px;
 }
 
 .icon-box{
@@ -121,7 +140,9 @@ main{
 	}
 
 	.home-left-container-background-image{
-		background-image: url("../img/people2.png");
+		background-color: lightgrey;
+		background: linear-gradient(87deg,#2dce89,#2dcecc)!important;
+		background-repeat: no-repeat;
 	}
 
 	.about-left-container-background-image{
@@ -134,21 +155,10 @@ main{
 		color: white;
 	}
 
-	.burger-menu{
-		text-align: right;
-	}
-
 	.svgx{
 		fill: white;
 	}
 }
-
-
-/* 
-overlay section below
-Ini merupakan penerapan css dengan konsep 
-Adjedsent Selcetor.
-*/
 
 label {
   cursor:pointer;
@@ -165,21 +175,15 @@ label {
   text-align:center;
 }
 
-.overlay-trigger:checked + .overlay {
-  visibility: visible;
-}
-
-.overlay-trigger {
-  display: none;
+.overlay .overlay-container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .overlay h1{
-	margin-top: 35vh;
 	font-size: 50px;
-}
-
-.overlay h6{
-	margin-top: 200px;
 }
 
 .overlay p{
@@ -188,7 +192,7 @@ label {
 	font-weight: bold;
 }
 
-.overlay p:nth-child(2){
+/* .overlay p:nth-child(2){
 	margin-left:-85px;
 }
 
@@ -198,7 +202,7 @@ label {
 
 .overlay p:nth-child(4){
 	margin-left:-30px;
-}
+} */
 
 .reset-link{
 	text-decoration: none;
