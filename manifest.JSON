@@ -1,8 +1,8 @@
 {
   "name": "dipaPage",
   "short_name": "Dipa Page",
-  "theme_color": "#2196f3",
-  "background_color": "#2196f3",
+  "theme_color": "#185a9d",
+  "background_color": "#185a9d",
   "display": "standalone",
   "scope": "/",
   "start_url": "/"
