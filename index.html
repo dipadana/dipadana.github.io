@@ -14,11 +14,11 @@
 	<title>Dipadana's Profile</title>
 </head>
 <body>
-	<main>
-		<p class="burger-menu" onclick="menuBurgerVisible();">☰</p>
-		<div class="left-container home-left-container-background-image">
-			<div class="sub-left-container">
-				
+	<section>
+
+		<header>
+			<nav>
+				<p class="burger-menu" onclick="menuBurgerVisible();">☰</p>
 				<div class="overlay" onclick="menuBurgerHidden();" id="burger_menu" style="visibility: hidden;">
 					<div class="overlay-container">
 						<div style="height: 90%;">
@@ -32,29 +32,33 @@
 								</div>
 							</div>
 						</div>
-						<div style="height: 10%;">
+						<footer style="height: 10%;">
 							<h6>Made with ❤️ by Dipadana</h6>
-						</div>
+						</footer>
 					</div>
 				</div>
-
+			</nav>
+		</header>
+		
+		<aside class="left-container home-left-container-background-image">
+			<div class="sub-left-container">
 				<div style="display: flex; flex-direction: column; align-items: center;">
-				
 					<div>
-						<div style="display: flex; justify-content: start; width: 100%;">
+
+						<article style="display: flex; justify-content: start; width: 100%;">
 							<div class="avatar-img">
 								<img  src="./img/dipadana-img.jpg" alt="">
 							</div>
-						</div>
+						</article>
 	
-						<div class="main-text">
+						<article class="main-text">
 							<p>Denpasar, Bali</p>
 							<p>Dipadana Putu</p>
 							<p>front end enginering</p>
 							<p>really love programming and gaming</p>
-						</div>
+						</article>
 	
-						<div style="display: flex; justify-content: start; width: 100%;">
+						<article style="display: flex; justify-content: start; width: 100%;">
 							<div class="home-icon-box-container">
 								<div class="icon-box"> 
 									<a href="https://www.facebook.com/dipa.dana">
@@ -84,17 +88,17 @@
 									</a>
 								</div>
 							</div>
-						</div>
+						</article>
 
 					</div>
 				</div>
 			</div>
-		</div>
+		</aside>
 		
-		<div class="right-container">
-		</div>
+		<main class="right-container">
+		</main>
 
-	</main>
+	</section>
 	<script src="./js/script.js"></script>
 </body>
 </html>

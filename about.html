@@ -14,11 +14,11 @@
 	<title>Dipadana's Profile</title>
 </head>
 <body>
-	<main>
-		<p class="burger-menu" onclick="menuBurgerVisible();">☰</p>
-		<div class="left-container home-left-container-background-image">
-			<div class="sub-left-container">
-				
+	<section>
+
+		<header>
+			<nav>
+				<p class="burger-menu" onclick="menuBurgerVisible();">☰</p>
 				<div class="overlay" onclick="menuBurgerHidden();" id="burger_menu" style="visibility: hidden;">
 					<div class="overlay-container">
 						<div style="height: 90%;">
@@ -32,14 +32,18 @@
 								</div>
 							</div>
 						</div>
-						<div style="height: 10%;">
+						<footer style="height: 10%;">
 							<h6>Made with ❤️ by Dipadana</h6>
-						</div>
+						</footer>
 					</div>
 				</div>
-
+			</nav>
+		</header>
+		
+		<aside class="left-container home-left-container-background-image">
+			<div class="sub-left-container">
 				<div style="display: flex; justify-content: center;">
-					<div>
+					<article>
 						<div class="main-text main-text-about">
 							<p><small>Dipadana Putu</small></p>
 							<p>About Me</p>
@@ -86,16 +90,15 @@
 								</a>
 							</div>
 						</div>
-					</div>
+					</article>
 				</div>
-				
 			</div>
-		</div>
+		</aside>
 		
-		<div class="right-container">
-		</div>
+		<main class="right-container">
+		</main>
 
-	</main>
+	</section>
 	<script src="./js/script.js"></script>
 </body>
 </html>
